@@ -1,0 +1,22 @@
+﻿<localViews:LayoutAwarePage
+    x:Class="App2.MainView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:localViews="using:App2.Views"
+	xmlns:cirrViews="using:Cirrious.MvvmCross.WindowsCommon.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+	d:DataContext="{Binding Source={StaticResource DesignFactory}, Converter={StaticResource DesignConverter}, ConverterParameter=MainViewModel}"
+	>
+	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+		<StackPanel>
+			<TextBlock Text="1234"></TextBlock>
+			<TextBlock Text="123123"></TextBlock>
+			<TextBlock Text="{Binding DesignTimeHello, Mode=OneWay, FallbackValue=DesgnRuntimeFallback}" FontSize="30" />
+			<TextBlock Text="123123"></TextBlock>
+			<TextBox Text="{Binding MyProperty, Mode=TwoWay, FallbackValue=FallBackTextBox}" />
+		</StackPanel>
+	</Grid>
+</localViews:LayoutAwarePage>

@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Cirrious.MvvmCross.ViewModels;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Navigation;
 
 namespace App2.ViewModels
 {
@@ -28,7 +30,17 @@ namespace App2.ViewModels
 		}
 
 
-		
+
+		/// <summary>
+		/// Show the view model.
+		/// </summary>
+		public void Show()
+		{
+			this.ShowViewModel<MainViewModel>();
+		}
+
+
+
 		public void Init()
 		{
 			int i = 0;

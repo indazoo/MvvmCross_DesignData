@@ -104,6 +104,10 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <ProjectReference Include="..\Cirrious\Cirrious.MvvmCross.Binding\Cirrious.MvvmCross.Binding.csproj">
+      <Project>{64dcd397-9019-41e8-a928-e5f5c5df185b}</Project>
+      <Name>Cirrious.MvvmCross.Binding</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Cirrious\Cirrious.MvvmCross.WindowsCommon\Cirrious.MvvmCross.WindowsCommon.csproj">
       <Project>{3e8c6fe7-9d2b-4a90-94f4-1b545b908911}</Project>
       <Name>Cirrious.MvvmCross.WindowsCommon</Name>

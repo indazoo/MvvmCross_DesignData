@@ -30,6 +30,8 @@ namespace Cirrious.MvvmCross.ViewModels
 
         public static void CallBundleMethod(this IMvxViewModel viewModel, MethodInfo methodInfo, IMvxBundle bundle)
         {
+			//if (bundle == null) return;  //DesignMode in Visual Studio needs this check
+
             var parameters = methodInfo.GetParameters().ToArray();
             if (parameters.Count() == 1
                 && parameters[0].ParameterType == typeof (IMvxBundle))

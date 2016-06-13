@@ -57,7 +57,7 @@ namespace CrossUI.Droid.Dialog
         {
             var currentFocus = ((Activity) Context).CurrentFocus;
             base.OnSizeChanged(w, h, oldw, oldh);
-            //we have to place the focus request on the working-queueu, since by this time someone else has already requested the focus because of listactivity/listview's incompatiblity issues with edittext views
+            //we have to place the focus request on the working-queueu, since by this time someone else has already requested the focus because of listactivity/listview's incompatibility issues with edittext views
             new Handler().Post(() =>
                 {
                     if (currentFocus != null && ((Activity)Context).CurrentFocus != currentFocus)

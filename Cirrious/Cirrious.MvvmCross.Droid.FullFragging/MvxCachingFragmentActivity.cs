@@ -106,7 +106,7 @@ namespace Cirrious.MvvmCross.Droid.FullFragging
 				return;
 			}
 
-			// Harder ressurection, just in case we were killed to death.
+			// Harder resurrection, just in case we were killed to death.
             var json = savedInstanceState.GetString(SavedFragmentTypesKey);
 			if (string.IsNullOrEmpty(json)) return;
 
